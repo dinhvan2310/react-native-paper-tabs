@@ -1,14 +1,13 @@
-import * as React from 'react';
-import { Animated, StyleSheet, View, Platform, Text, TouchableOpacity } from 'react-native';
-import type { LayoutChangeEvent, TextProps, TextStyle } from 'react-native';
-import { Badge, TouchableRipple } from 'react-native-paper';
-import type { MD3LightTheme } from 'react-native-paper';
 import type { ReactElement } from 'react';
-import type { TabScreenProps } from './TabScreen';
-import Color from 'color';
+import * as React from 'react';
+import type { LayoutChangeEvent, TextProps, TextStyle } from 'react-native';
+import { Animated, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import type { MD3LightTheme } from 'react-native-paper';
+import { Badge } from 'react-native-paper';
 import { useAnimatedText } from './internal';
-import type { IconPosition, Mode } from './utils';
 import MaterialCommunityIcon from './MaterialCommunityIcon';
+import type { TabScreenProps } from './TabScreen';
+import type { IconPosition, Mode } from './utils';
 
 const AnimatedText = Animated.createAnimatedComponent<
   React.ComponentType<TextProps>
@@ -49,16 +48,6 @@ export default function TabsHeaderItem({
   mode: Mode;
   tabLabelStyle?: TextStyle | undefined;
 }) {
-  const baseColor = theme.colors.primary;
-  const rippleColor = React.useMemo(
-    () =>
-      Color(baseColor as any)
-        .alpha(0.32)
-        .rgb()
-        .string(),
-    [baseColor]
-  );
-
   const { color, opacity } = useAnimatedText({
     active,
     position,
