@@ -28,7 +28,7 @@ export default function TabsHeader({
   tabHeaderStyle,
   tabLabelStyle,
   children,
-  showEndSpace
+  showEndSpace = true
 }: SwiperRenderProps) {
   const { index, goTo } = React.useContext(TabsContext);
   const { colors, dark: isDarkTheme, mode: themeMode, isV3 } = theme;
