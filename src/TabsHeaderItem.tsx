@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Animated, StyleSheet, View, Platform, Text } from 'react-native';
+import { Animated, StyleSheet, View, Platform, Text, TouchableOpacity } from 'react-native';
 import type { LayoutChangeEvent, TextProps, TextStyle } from 'react-native';
 import { Badge, TouchableRipple } from 'react-native-paper';
 import type { MD3LightTheme } from 'react-native-paper';
@@ -80,7 +80,7 @@ export default function TabsHeaderItem({
       style={[styles.tabRoot, mode === 'fixed' && styles.tabRootFixed]}
       onLayout={(e) => onTabLayout(tabIndex, e)}
     >
-      <TouchableRipple
+      <TouchableOpacity
         disabled={tab.props.disabled}
         onPress={(e) => {
           goTo(tabIndex);
@@ -93,7 +93,6 @@ export default function TabsHeaderItem({
           tab.props.disabled && styles.touchableRippleDisabled,
           { borderRadius: theme.roundness },
         ]}
-        rippleColor={rippleColor}
         // @ts-ignore
         accessibilityTraits={'button'}
         accessibilityRole="button"
@@ -177,7 +176,7 @@ export default function TabsHeaderItem({
             </AnimatedText>
           ) : null}
         </View>
-      </TouchableRipple>
+      </TouchableOpacity>
     </View>
   );
 }
