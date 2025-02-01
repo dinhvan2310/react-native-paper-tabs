@@ -27,6 +27,7 @@ export interface SwiperRenderProps {
   mode: Mode;
   tabHeaderStyle: ViewStyle | undefined;
   tabLabelStyle: TextStyle | undefined;
+  showEndSpace?: boolean;
 }
 
 export interface SwiperProps {
