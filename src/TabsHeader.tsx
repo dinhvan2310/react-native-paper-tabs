@@ -272,7 +272,7 @@ const styles = StyleSheet.create({
   indicator: {
     position: 'absolute',
     height: 2,
-    width: 1,
+    width: 0.5,
     left: 0,
     bottom: 0,
     ...Platform.select({
