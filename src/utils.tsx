@@ -37,6 +37,7 @@ export interface SwiperProps {
   iconPosition?: IconPosition;
   showTextLabel?: boolean;
   showLeadingSpace?: boolean;
+  showEndSpace?: boolean;
   uppercase: boolean;
   mode: Mode;
   disableSwipe?: boolean;
