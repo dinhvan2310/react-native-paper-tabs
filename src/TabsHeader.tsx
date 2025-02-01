@@ -28,6 +28,7 @@ export default function TabsHeader({
   tabHeaderStyle,
   tabLabelStyle,
   children,
+  showEndSpace
 }: SwiperRenderProps) {
   const { index, goTo } = React.useContext(TabsContext);
   const { colors, dark: isDarkTheme, mode: themeMode, isV3 } = theme;
@@ -220,6 +221,9 @@ export default function TabsHeader({
               tabLabelStyle={tabLabelStyle}
             />
           ))}
+          {mode === 'scrollable' && showEndSpace ? (
+            <View style={styles.scrollablePadding} />
+          ) : null}
           <Animated.View
             ref={indicatorRef}
             pointerEvents="none"
