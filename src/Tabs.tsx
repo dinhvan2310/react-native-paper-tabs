@@ -15,6 +15,7 @@ function Tabs({
   iconPosition = 'leading',
   showTextLabel = true,
   showLeadingSpace = true,
+  showEndSpace = true,
   disableSwipe = false,
   tabHeaderStyle,
   tabLabelStyle,
@@ -27,6 +28,7 @@ function Tabs({
   iconPosition?: IconPosition;
   showTextLabel?: boolean;
   showLeadingSpace?: boolean;
+  showEndSpace?: boolean;
   uppercase?: boolean;
   mode?: Mode;
   disableSwipe?: boolean;
@@ -48,6 +50,7 @@ function Tabs({
       disableSwipe={disableSwipe}
       tabHeaderStyle={tabHeaderStyle}
       tabLabelStyle={tabLabelStyle}
+      showEndSpace={showEndSpace}
     >
       {children}
     </Swiper>
